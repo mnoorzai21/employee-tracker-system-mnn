@@ -1,7 +1,7 @@
-drop database if exist employee_db;
+drop database if Exists employee_db;
 create database employee_db;
 
-use employee_db;
+USE employee_db;
 
 create table department (
     id int auto_increment not null primary key,
@@ -12,7 +12,7 @@ create table role (
     id int auto_increment not null primary key,
     title varchar(30) not null,
     salary decimal not null,
-    department_id int not,
+    department_id int,
     foreign key (department_id)
         references department(id)
 );
